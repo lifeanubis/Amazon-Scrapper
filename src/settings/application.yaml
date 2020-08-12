@@ -1,0 +1,102 @@
+# ===================================================
+#
+#   This file contains metadata for the application.
+#   You can use this to store variables that change
+#   behavior specific to the application as well and
+#   then import this file to retrieve the information.
+#
+#
+#     /$$$$$$   /$$$$$$   /$$$$$$
+#    |____  $$ /$$__  $$ /$$__  $$
+#     /$$$$$$$| $$  \ $$| $$  \ $$
+#    /$$__  $$| $$  | $$| $$  | $$
+#   |  $$$$$$$| $$$$$$$/| $$$$$$$/
+#    \_______/| $$____/ | $$____/
+#             | $$      | $$
+#             | $$      | $$
+#             |__/      |__/
+#
+#   But make sure that it's not imported in folders
+#   that are supposed to be independent of business logic,
+#   such as 'components'. You can also change things like
+#   introductory banner name and exit message here.
+#
+# ===================================================
+---
+name: random
+version: 0.0.1
+messages:
+  intro: random
+  outro: bye.
+
+#  ======================================
+#    This is where you put all variables
+#    specific to whatever automation you're
+#    trying to perform. You can put a few URLs
+#    here or selectors and stuff like that in
+#    an object format.
+#  ======================================
+
+automation:
+  #  ======================================
+  #     Here you write the data associated
+  #     with your automation template. The structure
+  #     for this totally depends on you, you can
+  #     change the root URL here as well, and maybe
+  #     call it something else according to your
+  #     preference.
+  #  ======================================
+
+  information:
+    root:
+      https://www.instagram.com/
+      # https://www.youtube.com/results?search_query=sojanta
+    #  https://pptr.dev/
+  #   https://www.youtube.com/
+  # https://www.amazon.in/
+
+  # <-------------------------------------->
+
+  #  ======================================
+  #    These settings are here for you to
+  #    use whenever you create a new browser
+  #    or a page. These options make the page
+  #    or browser behave in the most predictable
+  #    way possible.
+  #  ======================================
+  #
+  settings:
+    browser:
+      ignoreHTTPSErrors: true
+      headless: false
+      defaultViewport: null
+
+    # <-------------------------------------->
+
+    page:
+      waitUntil: networkidle0
+      timeout: 0
+
+      #  ======================================
+      #    Use static behavior options in cases
+      #    where the page you're trying to load
+      #    is not a complex web application like
+      #    LinkedIn. Static is preferred whenever
+      #    you're in doubt, so the default values
+      #    of static are also attached to the parent
+      #    object so you can use that directly as well.
+      #  ======================================
+
+      static:
+        waitUntil: networkidle0
+        timeout: 0
+
+      #  ======================================
+      #    Dynamic should be used in cases of
+      #    complex SPAs or multiple page applications,
+      #    that render data dynamically. But that too
+      #    sometimes, in most cases static is preferred.
+      #  ======================================
+      dynamic:
+        waitUntil: networkidle2
+        timeout: 0

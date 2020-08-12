@@ -1,0 +1,47 @@
+# ===================================================
+#
+#   This file contains information that the user
+#   needs to answer so that our script can run
+#   based on the information that it retrieves.
+#
+#   This interactive CLI uses primarily uses a prompter package
+#   called `enquirer`, so it's best that you look
+#   at enquirer's docs on npm to know the type and structure
+#   of each 'options' object here
+#   (it's a combination of enquirer and commander):
+#
+#   https://www.npmjs.com/package/enquirer
+#
+#   To know more about the structure of every command,
+#   you should checkout documentation for 'commander', here:
+#
+#   https://www.npmjs.com/package/commander
+#
+# ===================================================
+
+---
+options:
+  - format:
+    description:
+    question:
+      type:
+      name:
+      message:
+
+commands:
+  - name:
+    alias:
+    description:
+    arguments:
+      format:
+      questions:
+        - type:
+          name:
+          message:
+    options:
+      - format:
+        description:
+        question:
+          type:
+          name:
+          message:

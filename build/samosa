@@ -1,0 +1,913 @@
+#!/usr/bin/env node
+/******/ (function(modules) { // webpackBootstrap
+/******/ 	// The module cache
+/******/ 	var installedModules = {};
+/******/
+/******/ 	// The require function
+/******/ 	function __webpack_require__(moduleId) {
+/******/
+/******/ 		// Check if module is in cache
+/******/ 		if(installedModules[moduleId]) {
+/******/ 			return installedModules[moduleId].exports;
+/******/ 		}
+/******/ 		// Create a new module (and put it into the cache)
+/******/ 		var module = installedModules[moduleId] = {
+/******/ 			i: moduleId,
+/******/ 			l: false,
+/******/ 			exports: {}
+/******/ 		};
+/******/
+/******/ 		// Execute the module function
+/******/ 		modules[moduleId].call(module.exports, module, module.exports, __webpack_require__);
+/******/
+/******/ 		// Flag the module as loaded
+/******/ 		module.l = true;
+/******/
+/******/ 		// Return the exports of the module
+/******/ 		return module.exports;
+/******/ 	}
+/******/
+/******/
+/******/ 	// expose the modules object (__webpack_modules__)
+/******/ 	__webpack_require__.m = modules;
+/******/
+/******/ 	// expose the module cache
+/******/ 	__webpack_require__.c = installedModules;
+/******/
+/******/ 	// define getter function for harmony exports
+/******/ 	__webpack_require__.d = function(exports, name, getter) {
+/******/ 		if(!__webpack_require__.o(exports, name)) {
+/******/ 			Object.defineProperty(exports, name, { enumerable: true, get: getter });
+/******/ 		}
+/******/ 	};
+/******/
+/******/ 	// define __esModule on exports
+/******/ 	__webpack_require__.r = function(exports) {
+/******/ 		if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
+/******/ 			Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
+/******/ 		}
+/******/ 		Object.defineProperty(exports, '__esModule', { value: true });
+/******/ 	};
+/******/
+/******/ 	// create a fake namespace object
+/******/ 	// mode & 1: value is a module id, require it
+/******/ 	// mode & 2: merge all properties of value into the ns
+/******/ 	// mode & 4: return value when already ns object
+/******/ 	// mode & 8|1: behave like require
+/******/ 	__webpack_require__.t = function(value, mode) {
+/******/ 		if(mode & 1) value = __webpack_require__(value);
+/******/ 		if(mode & 8) return value;
+/******/ 		if((mode & 4) && typeof value === 'object' && value && value.__esModule) return value;
+/******/ 		var ns = Object.create(null);
+/******/ 		__webpack_require__.r(ns);
+/******/ 		Object.defineProperty(ns, 'default', { enumerable: true, value: value });
+/******/ 		if(mode & 2 && typeof value != 'string') for(var key in value) __webpack_require__.d(ns, key, function(key) { return value[key]; }.bind(null, key));
+/******/ 		return ns;
+/******/ 	};
+/******/
+/******/ 	// getDefaultExport function for compatibility with non-harmony modules
+/******/ 	__webpack_require__.n = function(module) {
+/******/ 		var getter = module && module.__esModule ?
+/******/ 			function getDefault() { return module['default']; } :
+/******/ 			function getModuleExports() { return module; };
+/******/ 		__webpack_require__.d(getter, 'a', getter);
+/******/ 		return getter;
+/******/ 	};
+/******/
+/******/ 	// Object.prototype.hasOwnProperty.call
+/******/ 	__webpack_require__.o = function(object, property) { return Object.prototype.hasOwnProperty.call(object, property); };
+/******/
+/******/ 	// __webpack_public_path__
+/******/ 	__webpack_require__.p = "";
+/******/
+/******/
+/******/ 	// Load entry module and return exports
+/******/ 	return __webpack_require__(__webpack_require__.s = 18);
+/******/ })
+/************************************************************************/
+/******/ ([
+/* 0 */
+/***/ (function(module, exports) {
+
+module.exports = require("gradient-string");
+
+/***/ }),
+/* 1 */
+/***/ (function(module, exports) {
+
+module.exports = require("chalk-animation");
+
+/***/ }),
+/* 2 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"options\":[{\"format\":null,\"description\":null,\"question\":{\"type\":null,\"name\":null,\"message\":null}}],\"commands\":[{\"name\":null,\"alias\":null,\"description\":null,\"arguments\":{\"format\":null,\"questions\":[{\"type\":null,\"name\":null,\"message\":null}]},\"options\":[{\"format\":null,\"description\":null,\"question\":{\"type\":null,\"name\":null,\"message\":null}}]}]}");
+
+/***/ }),
+/* 3 */
+/***/ (function(module) {
+
+module.exports = JSON.parse("{\"name\":\"random\",\"version\":\"0.0.1\",\"messages\":{\"intro\":\"random\",\"outro\":\"bye.\"},\"automation\":{\"information\":{\"root\":\"https://www.instagram.com/\"},\"settings\":{\"browser\":{\"ignoreHTTPSErrors\":true,\"headless\":false,\"defaultViewport\":null},\"page\":{\"waitUntil\":\"networkidle0\",\"timeout\":0,\"static\":{\"waitUntil\":\"networkidle0\",\"timeout\":0},\"dynamic\":{\"waitUntil\":\"networkidle2\",\"timeout\":0}}}}}");
+
+/***/ }),
+/* 4 */
+/***/ (function(module, exports) {
+
+module.exports = require("ramda");
+
+/***/ }),
+/* 5 */
+/***/ (function(module, exports) {
+
+module.exports = require("puppeteer");
+
+/***/ }),
+/* 6 */
+/***/ (function(module, exports) {
+
+module.exports = require("objects-to-csv");
+
+/***/ }),
+/* 7 */
+/***/ (function(module, exports) {
+
+module.exports = require("data-to-json");
+
+/***/ }),
+/* 8 */
+/***/ (function(module, exports) {
+
+module.exports = require("chalk");
+
+/***/ }),
+/* 9 */
+/***/ (function(module, exports) {
+
+module.exports = require("boxen");
+
+/***/ }),
+/* 10 */
+/***/ (function(module, exports) {
+
+module.exports = require("figlet");
+
+/***/ }),
+/* 11 */
+/***/ (function(module, exports) {
+
+module.exports = require("terminal-link");
+
+/***/ }),
+/* 12 */
+/***/ (function(module, exports) {
+
+module.exports = require("cfonts");
+
+/***/ }),
+/* 13 */
+/***/ (function(module, exports) {
+
+module.exports = require("cli-format");
+
+/***/ }),
+/* 14 */
+/***/ (function(module, exports) {
+
+module.exports = require("shelljs.exec");
+
+/***/ }),
+/* 15 */
+/***/ (function(module, exports) {
+
+module.exports = require("enquirer");
+
+/***/ }),
+/* 16 */
+/***/ (function(module, exports) {
+
+module.exports = require("commander");
+
+/***/ }),
+/* 17 */
+/***/ (function(module, exports) {
+
+module.exports = require("fs");
+
+/***/ }),
+/* 18 */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+// ESM COMPAT FLAG
+__webpack_require__.r(__webpack_exports__);
+
+// EXTERNAL MODULE: ./src/settings/application.yaml
+var settings_application = __webpack_require__(3);
+
+// EXTERNAL MODULE: ./src/settings/configuration.yaml
+var settings_configuration = __webpack_require__(2);
+
+// EXTERNAL MODULE: external "puppeteer"
+var external_puppeteer_ = __webpack_require__(5);
+var external_puppeteer_default = /*#__PURE__*/__webpack_require__.n(external_puppeteer_);
+
+// EXTERNAL MODULE: external "fs"
+var external_fs_ = __webpack_require__(17);
+
+// EXTERNAL MODULE: external "objects-to-csv"
+var external_objects_to_csv_ = __webpack_require__(6);
+var external_objects_to_csv_default = /*#__PURE__*/__webpack_require__.n(external_objects_to_csv_);
+
+// EXTERNAL MODULE: external "data-to-json"
+var external_data_to_json_ = __webpack_require__(7);
+var external_data_to_json_default = /*#__PURE__*/__webpack_require__.n(external_data_to_json_);
+
+// CONCATENATED MODULE: ./src/components/elements/csv.js
+
+
+
+/* harmony default export */ var csv = ({
+  write: async (object, location) => {
+    const converted = new external_objects_to_csv_default.a(object);
+    if (location) await converted.toDisk(location, {
+      allColumns: true
+    });
+    return await converted.toString();
+  },
+  read: location => {
+    return external_data_to_json_default.a.csv({
+      filePath: location
+    }).toJson();
+  }
+});
+// EXTERNAL MODULE: external "ramda"
+var external_ramda_ = __webpack_require__(4);
+var external_ramda_default = /*#__PURE__*/__webpack_require__.n(external_ramda_);
+
+// EXTERNAL MODULE: external "chalk"
+var external_chalk_ = __webpack_require__(8);
+var external_chalk_default = /*#__PURE__*/__webpack_require__.n(external_chalk_);
+
+// EXTERNAL MODULE: external "boxen"
+var external_boxen_ = __webpack_require__(9);
+var external_boxen_default = /*#__PURE__*/__webpack_require__.n(external_boxen_);
+
+// EXTERNAL MODULE: external "figlet"
+var external_figlet_ = __webpack_require__(10);
+var external_figlet_default = /*#__PURE__*/__webpack_require__.n(external_figlet_);
+
+// EXTERNAL MODULE: external "terminal-link"
+var external_terminal_link_ = __webpack_require__(11);
+var external_terminal_link_default = /*#__PURE__*/__webpack_require__.n(external_terminal_link_);
+
+// EXTERNAL MODULE: external "gradient-string"
+var external_gradient_string_ = __webpack_require__(0);
+var external_gradient_string_default = /*#__PURE__*/__webpack_require__.n(external_gradient_string_);
+
+// EXTERNAL MODULE: external "chalk-animation"
+var external_chalk_animation_ = __webpack_require__(1);
+var external_chalk_animation_default = /*#__PURE__*/__webpack_require__.n(external_chalk_animation_);
+
+// EXTERNAL MODULE: external "cfonts"
+var external_cfonts_ = __webpack_require__(12);
+var external_cfonts_default = /*#__PURE__*/__webpack_require__.n(external_cfonts_);
+
+// EXTERNAL MODULE: external "cli-format"
+var external_cli_format_ = __webpack_require__(13);
+var external_cli_format_default = /*#__PURE__*/__webpack_require__.n(external_cli_format_);
+
+// CONCATENATED MODULE: ./src/components/elements/text.js
+/*
+  ======================================
+
+     /$$                           /$$
+    | $$                          | $$
+   /$$$$$$    /$$$$$$  /$$   /$$ /$$$$$$
+  |_  $$_/   /$$__  $$|  $$ /$$/|_  $$_/
+    | $$    | $$$$$$$$ \  $$$$/   | $$
+    | $$ /$$| $$_____/  >$$  $$   | $$ /$$
+    |  $$$$/|  $$$$$$$ /$$/\  $$  |  $$$$/
+     \___/   \_______/|__/  \__/   \___/
+
+   Usage: import text from "components/elements/text"
+
+   and then you can use either of the functions mentioned
+   below. You should also checkout the docs of
+   dependencies that this file uses while working
+   with it because they're very short and provide a
+   much richer documentation.
+
+  ======================================
+*/
+
+
+
+
+
+
+
+
+
+/* harmony default export */ var elements_text = ({
+  basic: external_chalk_default.a,
+  link: external_terminal_link_default.a,
+  format: external_cli_format_default.a,
+  gradient: {
+    /*
+      ======================================
+        If you want to gradient-ify your
+        strings, use one of these functions.
+        You can pipe them and get some
+        interesting behaviors as well. May
+        not work well with animations though.
+      ======================================
+    */
+    custom: external_gradient_string_default.a,
+    teen: external_gradient_string_default.a.teen,
+    mind: external_gradient_string_default.a.mind,
+    vice: external_gradient_string_default.a.vice,
+    fruit: external_gradient_string_default.a.fruit,
+    atlas: external_gradient_string_default.a.atlas,
+    retro: external_gradient_string_default.a.retro,
+    summer: external_gradient_string_default.a.summer,
+    pastel: external_gradient_string_default.a.pastel,
+    rainbow: external_gradient_string_default.a.rainbow,
+    cristal: external_gradient_string_default.a.cristal,
+    morning: external_gradient_string_default.a.morning,
+    passion: external_gradient_string_default.a.passion,
+    instagram: external_gradient_string_default.a.instagram
+  },
+  animation: {
+    /*
+      ======================================
+        Use some of these functions to create
+        colorful animations on the terminal
+        that support it. It doesn't work well
+        if you pipe it with say gradient functions,
+        so keep that in mind while using it.
+      ======================================
+    */
+    neon: external_chalk_animation_default.a.neon,
+    pulse: external_chalk_animation_default.a.pulse,
+    radar: external_chalk_animation_default.a.radar,
+    glitch: external_chalk_animation_default.a.glitch,
+    karaoke: external_chalk_animation_default.a.karaoke,
+    rainbow: external_chalk_animation_default.a.rainbow
+  },
+
+  heading(content) {
+    /*
+      ======================================
+        This function returns a figlet header
+        without a box surrounding it. If you
+        want the box or gradient, you can pipe
+        or compose these functions together because
+        return values for all of these calls is a string.
+      ======================================
+    */
+    return external_figlet_default.a.textSync(content, {
+      font: "Standard",
+      horizontalLayout: "fitted",
+      verticalLayout: "default"
+    });
+  },
+
+  fancy(content, options = {}) {
+    return external_cfonts_default.a.render(content, {
+      font: "tiny",
+      align: "left",
+      colors: ["system"],
+      background: "transparent",
+      letterSpacing: 1,
+      lineHeight: 1,
+      space: false,
+      maxLength: "0",
+      gradient: false,
+      independentGradient: false,
+      transitionGradient: false,
+      env: "node",
+      ...options
+    }).string;
+  },
+
+  boxed(string, options = {}) {
+    /*
+      ======================================
+        This function optionally takes arguments
+        and uses `boxen` package to create boxes
+        surrounding some string in the terminal.
+        You can pass in options to the call if you
+        want to override default behavior. Look
+        for boxen's npm docs to know how to do that.
+      ======================================
+    */
+    return external_boxen_default()(string, {
+      padding: 1,
+      borderStyle: "bold",
+      ...options
+    });
+  },
+
+  tag(string, options = {}) {
+    /*
+      ======================================
+        This function returns a pipe of
+        `boxed`` and `gradient`. So that means you'll
+        get some colorful boxed string. Unlike
+        `banner`, it doesn't turn the string big, so
+        it can be seen as a tag. Useful in some cases.
+      ======================================
+    */
+    const gradient = options.gradient ? options.gradient : "fruit";
+    return external_ramda_default.a.pipe(string => this.basic(string), string => this.boxed(string, {
+      padding: {
+        left: 1,
+        right: 1,
+        top: 0,
+        bottom: 0
+      },
+      borderStyle: "bold"
+    }), string => this.gradient[gradient](string))(string);
+  },
+
+  banner(string, options = {}) {
+    /*
+      ======================================
+        This function is a pipe of some functions
+        above and essentially it creates a big and
+        boxed colorful header on the terminal.
+      ======================================
+    */
+    const gradient = options.gradient ? options.gradient : "fruit";
+    return external_ramda_default.a.pipe(string => this.basic(string), string => this.heading(string), string => this.boxed(string, {
+      margin: {
+        bottom: 1
+      }
+    }), string => this.gradient[gradient](string))(string);
+  },
+
+  poster(string, options = {}) {
+    /*
+      ======================================
+        This function is a pipe of some functions
+        above and essentially it creates a big and
+        boxed colorful header on the terminal.
+      ======================================
+    */
+    const gradient = options.gradient ? options.gradient : "yellow,blue";
+    return external_ramda_default.a.pipe(string => this.basic(string), string => this.fancy(string, {
+      gradient: gradient
+    }), string => this.boxed(string, {
+      margin: {
+        bottom: 1
+      }
+    }))(string);
+  }
+
+});
+// EXTERNAL MODULE: external "shelljs.exec"
+var external_shelljs_exec_ = __webpack_require__(14);
+var external_shelljs_exec_default = /*#__PURE__*/__webpack_require__.n(external_shelljs_exec_);
+
+// CONCATENATED MODULE: ./src/components/elements/shell.js
+/*
+  ======================================
+
+               /$$                 /$$ /$$
+              | $$                | $$| $$
+      /$$$$$$$| $$$$$$$   /$$$$$$ | $$| $$
+     /$$_____/| $$__  $$ /$$__  $$| $$| $$
+    |  $$$$$$ | $$  \ $$| $$$$$$$$| $$| $$
+     \____  $$| $$  | $$| $$_____/| $$| $$
+     /$$$$$$$/| $$  | $$|  $$$$$$$| $$| $$
+    |_______/ |__/  |__/ \_______/|__/|__/
+
+    This component *almost* resembles a shell.
+    First argument is name of the command,
+    second is an array of options following it.
+    And it's always synchronous so you don't
+    have to worry a lot about dealing with
+    other stuff.
+
+  ======================================
+*/
+
+/* harmony default export */ var shell = ((command, options = {}) => external_shelljs_exec_default()(command || "", { ...options
+}));
+// CONCATENATED MODULE: ./src/program/index.js
+
+
+
+
+
+const pass = "LAAPATA ganj";
+
+async function getLinks(url, settings, page) {
+  let bharmaar = [];
+  await page.goto(url, settings);
+  let links = await page.$$eval(".a-size-mini.a-spacing-none.a-color-base.s-line-clamp-2 a", links => links.map(title => {
+    let obj = {
+      link: title.href,
+      name: title.innerText
+    };
+    return obj;
+  }));
+  return links;
+}
+
+/* harmony default export */ var src_program = (async data => {
+  const {
+    options
+  } = data;
+  const {
+    information,
+    settings
+  } = settings_application.automation;
+  const browser = await external_puppeteer_default.a.launch(settings.browser);
+  const page = await browser.newPage();
+
+  try {
+    let s = [];
+
+    for (let i = 1; i <= 2; i++) {
+      let url = `https://www.amazon.in/s?k=haqqani+network&page=${i}&qid=1596962638&ref=sr_pg_${i}`;
+      let linku = await getLinks(url, settings.page.static, page);
+      s.push(...linku);
+      console.log(s);
+      await csv.write(s, "raww.csv");
+    }
+  } catch (e) {
+    throw new Error(e);
+  } finally {
+    await page.close();
+    await browser.close();
+  }
+});
+// CONCATENATED MODULE: ./src/components/molecules/options.js
+/*
+  ======================================
+
+                           /$$     /$$
+                          | $$    |__/
+      /$$$$$$   /$$$$$$  /$$$$$$   /$$  /$$$$$$  /$$$$$$$   /$$$$$$$
+     /$$__  $$ /$$__  $$|_  $$_/  | $$ /$$__  $$| $$__  $$ /$$_____/
+    | $$  \ $$| $$  \ $$  | $$    | $$| $$  \ $$| $$  \ $$|  $$$$$$
+    | $$  | $$| $$  | $$  | $$ /$$| $$| $$  | $$| $$  | $$ \____  $$
+    |  $$$$$$/| $$$$$$$/  |  $$$$/| $$|  $$$$$$/| $$  | $$ /$$$$$$$/
+     \______/ | $$____/    \___/  |__/ \______/ |__/  |__/|_______/
+              | $$
+              | $$
+              |__/
+
+    This is the script that does something with the options
+    specified by the user either though traditional CLI or
+    through interactive CLI modes. This file is simply for
+    dealing with the logic for options of the program.
+
+  ======================================
+*/
+
+
+
+
+/* harmony default export */ var molecules_options = (async options => {
+  if (options == {}) return {};
+  const data = await src_program({
+    options,
+    configuration: settings_configuration
+  });
+});
+// EXTERNAL MODULE: external "enquirer"
+var external_enquirer_ = __webpack_require__(15);
+var external_enquirer_default = /*#__PURE__*/__webpack_require__.n(external_enquirer_);
+
+// CONCATENATED MODULE: ./src/components/elements/prompt.js
+/*
+  ======================================
+                                                           /$$
+                                                          | $$
+    /$$$$$$   /$$$$$$   /$$$$$$  /$$$$$$/$$$$   /$$$$$$  /$$$$$$
+   /$$__  $$ /$$__  $$ /$$__  $$| $$_  $$_  $$ /$$__  $$|_  $$_/
+  | $$  \ $$| $$  \__/| $$  \ $$| $$ \ $$ \ $$| $$  \ $$  | $$
+  | $$  | $$| $$      | $$  | $$| $$ | $$ | $$| $$  | $$  | $$ /$$
+  | $$$$$$$/| $$      |  $$$$$$/| $$ | $$ | $$| $$$$$$$/  |  $$$$/
+  | $$____/ |__/       \______/ |__/ |__/ |__/| $$____/    \___/
+  | $$                                        | $$
+  | $$                                        | $$
+  |__/                                        |__/
+
+    Usage:
+
+    import prompts from "components/elements/prompts"
+    const answers = await prompts(<questions>)
+
+    To figure out the structure of 'questions'
+    and available types, checkout npm docs for enquirer here:
+    https://www.npmjs.com/package/enquirer
+
+  ======================================
+*/
+
+const enquirer = new external_enquirer_default.a();
+
+const prompter = questions => enquirer.prompt(questions);
+
+/* harmony default export */ var elements_prompt = (async questions => await prompter(questions));
+// CONCATENATED MODULE: ./src/components/molecules/commands.js
+/*
+  ======================================
+                                                                             /$$
+                                                                            | $$
+    /$$$$$$$  /$$$$$$  /$$$$$$/$$$$  /$$$$$$/$$$$   /$$$$$$  /$$$$$$$   /$$$$$$$  /$$$$$$$
+   /$$_____/ /$$__  $$| $$_  $$_  $$| $$_  $$_  $$ |____  $$| $$__  $$ /$$__  $$ /$$_____/
+  | $$      | $$  \ $$| $$ \ $$ \ $$| $$ \ $$ \ $$  /$$$$$$$| $$  \ $$| $$  | $$|  $$$$$$
+  | $$      | $$  | $$| $$ | $$ | $$| $$ | $$ | $$ /$$__  $$| $$  | $$| $$  | $$ \____  $$
+  |  $$$$$$$|  $$$$$$/| $$ | $$ | $$| $$ | $$ | $$|  $$$$$$$| $$  | $$|  $$$$$$$ /$$$$$$$/
+   \_______/ \______/ |__/ |__/ |__/|__/ |__/ |__/ \_______/|__/  |__/ \_______/|_______/
+
+  This file handles all sub-commands of this program.
+  You specify the command handler in the 'commands'
+  object below. 'key' in the command variable
+  must match with `command.name` specified in some
+  file in settings.
+
+  ======================================
+*/
+
+
+const commands_commands = {
+  command: async data => {
+    const {
+      args,
+      options,
+      settings
+    } = data;
+  }
+};
+
+const sanitize = settings => command => async (...options) => {
+  /*
+    ======================================
+      This function sanitizes arguments that
+      our commands will get. Commands are specified
+      above. First, if the user types the command
+      name but doesn't provide any arguments
+      or options, then the CLI should ask
+      for the arguments and options interactively.
+    ======================================
+  */
+  if (Array.isArray(options) && options.length > 0) {
+    /*
+        ======================================
+          If the options is an array, it means
+          that user has used the CLI in traditional way.
+          If this is the case, then the arguments need
+          to be filtered differently for core functionality
+          to apply.
+        ======================================
+      */
+    const info = options[options.length - 1];
+
+    const parser = (e, i) => ({
+      [e.name]: options.slice(0, -1)[i]
+    });
+
+    const args = {};
+
+    for (let p of info._args.map(parser)) {
+      const key = Object.keys(p)[0];
+      const value = p[key];
+      args[key] = value;
+    }
+
+    await command({
+      args,
+      settings,
+      options: info._optionValues
+    });
+  } else {
+    /*
+      ======================================
+        If the options is an array and its length
+        is zero, it means there may not be enough
+        data entered by the user for it to function.
+        In that case it should ask relevant questions
+        about the command.
+      ======================================
+    */
+    let questions = settings.arguments.questions;
+    questions = [...questions, ...settings.options.map(o => o.question)];
+    const input = await elements_prompt(questions);
+    delete input.command;
+    delete input.version;
+    await command({
+      input,
+      settings
+    });
+  }
+};
+
+/* harmony default export */ var molecules_commands = (command => {
+  /*
+    ======================================
+      All commands are higher order functions
+      that accept some setting (that's inside
+      the configuration file). And then we pass
+      in the settings to that function so that it
+      knows what needs to be done when it's called
+      traditionally or through interactive CLI.
+    ======================================
+  */
+  const settings = settings_configuration.commands.filter(c => c.name === command);
+  const selected = commands_commands.hasOwnProperty(command) ? commands_commands[command] : null;
+  return selected ? sanitize(...settings)(selected) : console.log;
+});
+// EXTERNAL MODULE: external "commander"
+var external_commander_ = __webpack_require__(16);
+var external_commander_default = /*#__PURE__*/__webpack_require__.n(external_commander_);
+
+// CONCATENATED MODULE: ./src/components/organisms/traditional.js
+
+/* harmony default export */ var traditional = (async settings => {
+  /*
+    ======================================
+      This handles the route when user
+      doesn't want an interactive route,
+      so he passes some flags in to do
+      the task.
+    ======================================
+  */
+  const {
+    program
+  } = external_commander_default.a;
+  const {
+    options,
+    commands,
+    data
+  } = settings;
+  const {
+    application,
+    configuration
+  } = data;
+  /*
+    ======================================
+      Specifying information about the
+      program itself - name, version.
+    ======================================
+  */
+
+  program.storeOptionsAsProperties(false).passCommandToAction(false);
+  program.name(application.name).version(application.version, "-v --version");
+  /*
+    ======================================
+      Binding global level parameters or
+      command line options to the program
+      from the file that inside 'settings'
+      folder.
+    ======================================
+  */
+
+  if (configuration.options) {
+    configuration.options.forEach(option => {
+      if (option.format) {
+        const description = option.description ? option.description : "";
+        program.option(option.format, option.description);
+      }
+    });
+  }
+  /*
+    ======================================
+      Binding global level commands and
+      their options to the program.
+    ======================================
+  */
+
+
+  if (configuration.commands) {
+    configuration.commands.forEach(command => {
+      if (command.name) {
+        const c = program.createCommand(command.name);
+        c.storeOptionsAsProperties(false);
+        if (command.alias) c.alias(command.alias);
+        if (command.arguments.format) c.arguments(command.arguments.format);
+        const options = command.options ? command.options : [];
+        options.forEach(option => {
+          if (option.format) {
+            const description = options.description ? options.description : "";
+            c.option(option.format, description);
+          }
+        });
+        c.action(commands(command.name));
+        program.addCommand(c);
+      }
+    });
+  }
+  /*
+    ======================================
+      Reading the argument list provided
+      to the program and providing it
+      to the controller 'program' variable.
+    ======================================
+  */
+
+
+  program.parse(process.argv);
+  await options(program.opts());
+  process.exit();
+});
+// CONCATENATED MODULE: ./src/components/organisms/interactive.js
+
+
+/* harmony default export */ var interactive = (async settings => {
+  /*
+    ======================================
+       This function prints out the banner
+      first, from the information provided
+      in `application.yaml` file. Then
+      it questions the user based on a file inside settings and
+      calls the default script specified inside
+      `scripts` folder: passing it the answers that
+      user has given to those questions.
+       Whether or not things don't work inside that function,
+      it exits out printing the exit message.
+     ======================================
+  */
+  const {
+    options,
+    data
+  } = settings;
+  const {
+    application,
+    configuration
+  } = data;
+  const intro = application.messages.intro ? elements_text.poster(application.messages.intro) : null;
+  const outro = application.messages.outro ? elements_text.basic.dim(`\n${application.messages.outro}`) : null;
+  if (intro) console.log(intro);
+
+  try {
+    const answers = await elements_prompt(configuration.options.map(option => option.question));
+    answers["version"] = application.version;
+    await options(answers);
+  } finally {
+    if (outro) console.log(outro);
+    process.exit();
+  }
+});
+// CONCATENATED MODULE: ./src/index.js
+/*
+  ======================================
+
+     /$$                 /$$
+    |__/                | $$
+     /$$ /$$$$$$$   /$$$$$$$  /$$$$$$  /$$   /$$
+    | $$| $$__  $$ /$$__  $$ /$$__  $$|  $$ /$$/
+    | $$| $$  \ $$| $$  | $$| $$$$$$$$ \  $$$$/
+    | $$| $$  | $$| $$  | $$| $$_____/  >$$  $$
+    | $$| $$  | $$|  $$$$$$$|  $$$$$$$ /$$/\  $$
+    |__/|__/  |__/ \_______/ \_______/|__/  \__/
+
+    This file is the entry point of this CLI tool.
+    There are basically two ways to pass in information
+    to the script -
+
+    1) Command Flags
+
+    The 'commands' function takes care of parsing the
+    argument list and then passing the information to the
+    main processor (which lies inside `scripts`)
+
+    2) Interactive CLI.
+
+    The 'interactive' function below calls an interactive CLI -
+    it first creates a banner from application name, then does
+    what needs to be done and then prints out an exit message
+    once everything's done.
+
+  ======================================
+*/
+
+
+
+
+
+
+/*
+  ======================================
+    If any arguments are present, use
+    the traditional CLI, otherwise use
+    the interactive CLI with relevant data.
+  ======================================
+*/
+
+const src_settings = {
+  options: molecules_options,
+  commands: molecules_commands,
+  data: {
+    application: settings_application,
+    configuration: settings_configuration
+  }
+};
+process.argv.length > 2 ? traditional(src_settings) : interactive(src_settings);
+
+/***/ })
+/******/ ]);
